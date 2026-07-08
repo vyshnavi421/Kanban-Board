@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+body{
+    background:#f4f7f5;
+    color:#2d3b36;
+}
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+}
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+header h1{
+    font-size:40px;
+    color:#4f6f52;
+}
+
+header p{
+    color:#6f7f74;
+    margin-top:8px;
+}
+.task-form{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    display:grid;
+    grid-template-columns:2fr 3fr 1fr auto;
+    gap:15px;
+    margin-bottom:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+input,
+textarea,
+select{
+    padding:12px;
+    border:1px solid #d5dfd7;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+textarea{
+    resize:none;
+    height:50px;
+}
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#5f8d6d;
+}
+button{
+    background:#5f8d6d;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    padding:12px 18px;
+    transition:.3s;
+}
+button:hover{
+    background:#4b7157;
+}
+.board{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+.column{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    min-height:550px;
+}
+.column h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4f6f52;
+}
+.task-list{
+    min-height:450px;
+}
+.card{
+    background:#f8fbf9;
+    border-left:6px solid #5f8d6d;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:15px;
+    cursor:grab;
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+.card h3{
+    margin-bottom:8px;
+}
+.card p{
+    color:#666;
+    margin-bottom:10px;
+}
+.priority{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    color:white;
+    margin-bottom:10px;
+}
+.high{
+    background:#e63946;
+}
+.medium{
+    background:#f4a261;
+}
+.low{
+    background:#2a9d8f;
+}
+.actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+}
+.actions button{
+    font-size:13px;
+    padding:8px 12px;
+}
+.edit{
+    background:#457b9d;
+}
+.delete{
+    background:#d62828;
+}
+@media(max-width:1000px){
+.board{
+grid-template-columns:1fr;
+}
+.task-form{
+grid-template-columns:1fr;
+}
+textarea{
+height:80px;
+}
+}
